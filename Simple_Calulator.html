@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Calculator</title>
+  <style>
+    body {
+      background: #f4f4f4;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      height: 100vh;
+      margin: 0;
+      padding-top: 60px;
+    }
+    .calculator {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      padding: 24px;
+      width: 260px;
+    }
+    .display {
+      width: 100%;
+      height: 50px;
+      background: #222;
+      color: #fff;
+      text-align: right;
+      font-size: 2em;
+      border: none;
+      border-radius: 6px;
+      margin-bottom: 18px;
+      padding: 5px 10px;
+      box-sizing: border-box;
+    }
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+    button {
+      height: 48px;
+      font-size: 1.25em;
+      border: none;
+      border-radius: 6px;
+      background: #e4e4e4;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    button:active {
+      background: #ccc;
+    }
+    .operator {
+      background: #ffb84d;
+      color: #fff;
+    }
+    .equals {
+      background: #4CAF50;
+      color: #fff;
+      grid-column: span 2;
+    }
+    .clear {
+      background: #f44336;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <input type="text" class="display" id="display" disabled>
+    <div class="buttons">
+      <button onclick="append('7')">7</button>
+      <button onclick="append('8')">8</button>
+      <button onclick="append('9')">9</button>
+      <button class="operator" onclick="append('/')">÷</button>
+      <button onclick="append('4')">4</button>
+      <button onclick="append('5')">5</button>
+      <button onclick="append('6')">6</button>
+      <button class="operator" onclick="append('*')">×</button>
+      <button onclick="append('1')">1</button>
+      <button onclick="append('2')">2</button>
+      <button onclick="append('3')">3</button>
+      <button class="operator" onclick="append('-')">−</button>
+      <button onclick="append('0')">0</button>
+      <button onclick="append('.')">.</button>
+      <button class="equals" onclick="calculate()">=</button>
+      <button class="operator" onclick="append('+')">+</button>
+      <button class="clear" onclick="clearDisplay()" style="grid-column: span 4;">C</button>
+    </div>
+  </div>
+  <script>
+    const display = document.getElementById('display');
+
+    function append(char) {
+      display.value += char;
+    }
+
+    function clearDisplay() {
+      display.value = '';
+    }
+
+    function calculate() {
+      try {
+        // Evaluate the expression using eval
+        // Only allows digits, (), ., and basic operators for safety
+        if (/^[0-9+\-*/.() ]+$/.test(display.value)) {
+          display.value = eval(display.value);
+        } else {
+          display.value = "Error";
+        }
+      } catch {
+        display.value = "Error";
+      }
+    }
+  </script>
+</body>
+</html>
