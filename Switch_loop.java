@@ -71,7 +71,5 @@ class Switch_loop {
             default -> System.out.println("Invalid choice!!!!!");
         }
     }
-    // Close the scanner after main method execution
-    // This prevents resource leaks
-    // and resolves syntax errors
 }
+
