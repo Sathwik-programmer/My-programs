@@ -6,8 +6,8 @@ public class Nest
 	{
 		Scanner in=new Scanner(System.in);
 		int n,r,h=0;
-		n=in.nextInt();
-		r=n;
+		r=in.nextInt();
+		n=r;
 		while(n!=0)
 		{
              if(n%10==0){
@@ -20,5 +20,6 @@ public class Nest
          System.out.println("Nest");
          else 
          System.out.println("Not nest");
+		in.close();
 	}
 }

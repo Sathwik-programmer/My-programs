@@ -4,7 +4,7 @@ class Math_Methods
     public static void main(String[]args)
     {
         Scanner in= new Scanner(System.in);
-        double a,b,c,d,e,f,g,h,i,j,k,l,m,n;
+        double a,b,c,d,e,f,g,h,i,j,k,m;
         System.out.println("Enter a");
         a=in.nextDouble();
         System.out.println("Enter b");
@@ -38,7 +38,8 @@ class Math_Methods
         System.out.println("Enter m");
         m=in.nextDouble();
         System.out.println(Math.floor(m));
-        System.out.println("Enter n");
+       
         System.out.println(Math.random());
+        in.close();
     }
 }
