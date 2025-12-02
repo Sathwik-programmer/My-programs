@@ -1,5 +1,5 @@
 import java.util.*;
-class Series
+class Series_s1_s2
 {
     public static void main()
     {
