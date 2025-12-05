@@ -17,7 +17,8 @@ public class Main
         commision=s_v*10.0/100;
         else
         commision=s_v*15.0/100;
-        System.out.println("Your commision is: "+commision);
+        System.out.println(name+"Your commision is: "+commision);
+        in.close();
 	}
 }
 

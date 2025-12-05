@@ -12,5 +12,6 @@ class Print_series
            s=tn*2;
            System.out.print(" "+s);
        }
+       in.close();
     }
 }
