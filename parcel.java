@@ -17,5 +17,6 @@ public class parcel
 		else
 			amount=(10*w)+(15*w)+(17*w)+(20*w);
 		System.out.println("The amount is: "+amount);
+		in.close();
 	}
 }

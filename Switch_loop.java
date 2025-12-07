@@ -7,7 +7,7 @@ class Switch_loop {
         char ch = in.next().charAt(0);
 
         switch (ch) {
-            case 'A' ->  {
+            case 'A' : {
                 System.out.println("Enter a number:");
                 int n = in.nextInt();
                 int temp = n, sum = 0;
@@ -22,7 +22,7 @@ class Switch_loop {
                     System.out.println("Not an Armstrong number");
                 }
             }
-            case 'S' ->  {
+            case 'S' :  {
                 System.out.println("Enter a number:");
                 int n = in.nextInt();
                 int temp = n, product = 1, sum = 0;
@@ -38,7 +38,7 @@ class Switch_loop {
                     System.out.println("It is not a spy number");
                 }
             }
-            case 'P' ->  {
+            case 'P' : {
                 System.out.println("Enter a number:");
                 int n = in.nextInt();
                 int sum = 0;
@@ -53,7 +53,7 @@ class Switch_loop {
                     System.out.println("It is not a perfect number");
                 }
             }
-            case 'N' ->  {
+            case 'N'  : {
                 System.out.println("Enter a number:");
                 int number = in.nextInt();
                 int sum = 0;
@@ -68,8 +68,9 @@ class Switch_loop {
                     System.out.println(number + " is NOT an Abundant Number.");
                 }
             }
-            default -> System.out.println("Invalid choice!!!!!");
+            default: System.out.println("Invalid choice!!!!!");
         }
+        in.close();
     }
 }
 

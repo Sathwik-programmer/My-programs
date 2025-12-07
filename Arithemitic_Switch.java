@@ -48,5 +48,6 @@ class Arithemitic_Switch
             default :
                 System.out.println("INVALD INPUT");
         }
+        in.close();
     }
 }

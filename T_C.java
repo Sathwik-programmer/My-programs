@@ -16,7 +16,7 @@ public class T_C
     else
     am=80+(6*d)+(5*d)+(4*d);
     System.out.println("Price is :"+am);
-
+in.close();
 }
 
 }
